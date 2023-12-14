@@ -52,7 +52,7 @@ int main() {
             double seconds = ta / attspeed;
 
             txtout << std::fixed  << std::setprecision(3) << seconds  << endl;
-            csvout << password << ", " << std::fixed  << std::setprecision(3) << seconds  << endl;
+            csvout << password << ", " << std::fixed  << std::setprecision(5) << seconds  << endl;
         }
         txtout.close();
         csvout.close();
