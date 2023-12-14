@@ -36,6 +36,7 @@ int main() {
         fstream stream(input);
         ofstream txtout(numoutput, std::ios::trunc);
         ofstream csvout(csvoutput, std::ios::trunc);
+        csvout << "Password, Time" << endl;
 
         while(stream >> password) {
             double ta = 0;
