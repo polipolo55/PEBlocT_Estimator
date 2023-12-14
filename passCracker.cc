@@ -23,15 +23,6 @@ int main() {
     }
     double seconds = ta / attspeed;
 
-    int days = static_cast<int>(seconds / (24 * 3600));
-    seconds -= days * (24  3600);
-
-    int hours = static_cast<int>(seconds / 3600);
-    seconds -= hours * 3600;
-
-    int minutes = static_cast<int>(seconds / 60);
-    seconds -= minutes * 60;
-
-    std::cout << days << " days " << hours << " hours " << minutes << " minutes " << seconds << " seconds" << std::endl;
+    std::cout << seconds << std::endl;
 
 }
