@@ -17,7 +17,7 @@ int main() {
     string charsetname;
     string fullinfo = "combined_OUT.csv";
     ofstream csvout(fullinfo, std::ios::trunc);
-    csvout << "Password, Time, Password Type" << endl;
+    csvout << "Password, Time, PasswordType" << endl;
     for(int i = 0; i < 3; ++i) {
         if(i == 0) {
             input = "all_characters.txt";
