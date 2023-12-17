@@ -22,7 +22,7 @@ def write_to_files(numbers, lowercase, all_characters, n):
     selected_lowercase = random.sample(lowercase, min(n, len(lowercase)))
     selected_all_characters = random.sample(all_characters, min(n, len(all_characters)))
 
-    with open('numbers.txt', 'w') as numbers_file:
+    with open('numbers.txt', 'w') as numbers_file: 
         numbers_file.write('\n'.join(selected_numbers))
 
     with open('lowercase.txt', 'w') as lowercase_file:
