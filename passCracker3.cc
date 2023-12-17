@@ -17,18 +17,13 @@ int main() {
     string fullinfo = "combined_OUT.csv";
     ofstream csvout(fullinfo, std::ios::trunc);
     csvout << "Password, Time, PasswordType" << endl;
-    for(int i = 0; i < 3; ++i) {
+    for(int i = 0; i < 2; ++i) {
         if(i == 0) {
             input = "all_characters.txt";
-            charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789*-@.!#_";
+            charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
             charsetname = "Mixed Characters";
         }
         if(i == 1) {
-            input = "lowercase.txt";
-            charset = "abcdefghijklmnopqrstuvwxyz";
-            charsetname = "Lowercase Only";           
-        }
-        if(i == 2) {
             input = "numbers.txt";
             charset = "0123456789";
             charsetname = "Numbers Only";
@@ -36,7 +31,7 @@ int main() {
         fstream stream(input);
         ofstream txtout(numoutput, std::ios::trunc);
         while(stream >> password) {
-            if(password.length() > 13) continue;
+            if(password.length() > 12) continue;
             double ta = 0;
             double attspeed = 1000000;
             
